@@ -1,0 +1,138 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "wec": "https://www.wecenergygroup.com/vocab#",
+    "schema": "https://schema.org/",
+    "espi": "https://naesb.org/espi#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "EnergyAccount": {
+      "@id": "wec:EnergyAccount",
+      "@type": "@id",
+      "description": "A utility customer account for electric or natural gas service"
+    },
+
+    "ElectricService": {
+      "@id": "wec:ElectricService",
+      "@type": "@id",
+      "description": "Electric power delivery service from a WEC Energy Group utility"
+    },
+
+    "NaturalGasService": {
+      "@id": "wec:NaturalGasService",
+      "@type": "@id",
+      "description": "Natural gas distribution service from a WEC Energy Group utility"
+    },
+
+    "EnergyUsage": {
+      "@id": "espi:UsagePoint",
+      "@type": "@id",
+      "description": "A record of energy consumption at a service point (Green Button ESPI)"
+    },
+
+    "OutageEvent": {
+      "@id": "wec:OutageEvent",
+      "@type": "@id",
+      "description": "An electricity service interruption event in WEC Energy Group service territory"
+    },
+
+    "WeEnergies": {
+      "@id": "wec:WeEnergies",
+      "@type": "schema:Organization",
+      "schema:name": "We Energies",
+      "schema:description": "Electric and natural gas utility serving southeast Wisconsin"
+    },
+
+    "WisconsinPublicService": {
+      "@id": "wec:WisconsinPublicService",
+      "@type": "schema:Organization",
+      "schema:name": "Wisconsin Public Service",
+      "schema:description": "Electric and natural gas utility serving northeast and central Wisconsin"
+    },
+
+    "PeoplesGas": {
+      "@id": "wec:PeoplesGas",
+      "@type": "schema:Organization",
+      "schema:name": "Peoples Gas",
+      "schema:description": "Natural gas utility serving Chicago metropolitan area"
+    },
+
+    "GreenButton": {
+      "@id": "https://www.energy.gov/data/green-button",
+      "@type": "@id",
+      "description": "Standard for accessing customer energy usage data from utilities"
+    },
+
+    "accountNumber": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+
+    "customerName": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+
+    "serviceAddress": {
+      "@id": "schema:address",
+      "@type": "schema:PostalAddress"
+    },
+
+    "accountStatus": {
+      "@id": "wec:accountStatus",
+      "@type": "xsd:string"
+    },
+
+    "serviceType": {
+      "@id": "wec:serviceType",
+      "@type": "xsd:string"
+    },
+
+    "currentBalance": {
+      "@id": "schema:price",
+      "@type": "xsd:decimal"
+    },
+
+    "dueDate": {
+      "@id": "schema:paymentDueDate",
+      "@type": "xsd:date"
+    },
+
+    "usageReadings": {
+      "@id": "espi:IntervalReading",
+      "@type": "@id"
+    },
+
+    "totalUsage": {
+      "@id": "espi:value",
+      "@type": "xsd:decimal"
+    },
+
+    "unit": {
+      "@id": "espi:uom",
+      "@type": "xsd:string"
+    },
+
+    "customersAffected": {
+      "@id": "wec:customersAffected",
+      "@type": "xsd:integer"
+    },
+
+    "estimatedRestoration": {
+      "@id": "wec:estimatedRestoration",
+      "@type": "xsd:dateTime"
+    },
+
+    "FocusOnEnergy": {
+      "@id": "wec:FocusOnEnergy",
+      "@type": "@id",
+      "description": "Wisconsin's statewide energy efficiency program administered by WEC Energy Group"
+    },
+
+    "rateCode": {
+      "@id": "wec:rateCode",
+      "@type": "xsd:string"
+    }
+  }
+}

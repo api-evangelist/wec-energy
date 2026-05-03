@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/wec-energy/json-schema/wec-energy-usage-schema.json",
+  "title": "WEC Energy Group Energy Usage Data",
+  "description": "JSON Schema for energy usage data records from WEC Energy Group utilities (We Energies, Wisconsin Public Service, Peoples Gas). Aligns with the Green Button / ESPI standard for customer energy usage information.",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "description": "WEC Energy Group customer account number"
+    },
+    "utility": {
+      "type": "string",
+      "enum": ["We Energies", "Wisconsin Public Service", "Peoples Gas", "North Shore Gas", "Minnesota Energy Resources", "Michigan Gas Utilities", "Upper Michigan Energy Resources"],
+      "description": "The WEC Energy Group subsidiary utility serving this account"
+    },
+    "serviceType": {
+      "type": "string",
+      "enum": ["Electric", "Natural Gas"],
+      "description": "Type of energy service"
+    },
+    "serviceAddress": {
+      "type": "object",
+      "description": "Service address for this account",
+      "properties": {
+        "street": {"type": "string"},
+        "city": {"type": "string"},
+        "state": {
+          "type": "string",
+          "enum": ["WI", "IL", "MN", "MI"]
+        },
+        "zip": {"type": "string", "pattern": "^\\d{5}(-\\d{4})?$"}
+      }
+    },
+    "billingPeriodStart": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of the billing period"
+    },
+    "billingPeriodEnd": {
+      "type": "string",
+      "format": "date",
+      "description": "End date of the billing period"
+    },
+    "usageReadings": {
+      "type": "array",
+      "description": "Array of interval energy usage readings",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of the usage reading"
+          },
+          "duration": {
+            "type": "integer",
+            "description": "Duration of the interval in seconds (e.g., 3600 for hourly)"
+          },
+          "value": {
+            "type": "number",
+            "description": "Energy consumption value"
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["kWh", "therms", "CCF"],
+            "description": "Unit of measurement"
+          },
+          "quality": {
+            "type": "string",
+            "enum": ["valid", "estimated", "missing"],
+            "description": "Data quality indicator"
+          }
+        },
+        "required": ["timestamp", "value", "unit"]
+      }
+    },
+    "totalUsage": {
+      "type": "number",
+      "description": "Total energy usage for the billing period"
+    },
+    "unit": {
+      "type": "string",
+      "enum": ["kWh", "therms", "CCF"],
+      "description": "Unit of measurement for total usage"
+    },
+    "peakDemand": {
+      "type": "number",
+      "description": "Peak demand in kW (for electric service, demand rate customers)"
+    }
+  },
+  "required": ["accountNumber", "utility", "serviceType", "billingPeriodStart", "billingPeriodEnd", "totalUsage", "unit"]
+}

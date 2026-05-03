@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/wec-energy/json-schema/wec-energy-account-schema.json",
+  "title": "WEC Energy Group Customer Account",
+  "description": "JSON Schema for a WEC Energy Group customer account record covering service information, billing, and account status.",
+  "type": "object",
+  "properties": {
+    "accountNumber": {
+      "type": "string",
+      "description": "Unique account number assigned by the utility"
+    },
+    "customerName": {
+      "type": "string",
+      "description": "Name of the account holder"
+    },
+    "utility": {
+      "type": "string",
+      "enum": ["We Energies", "Wisconsin Public Service", "Peoples Gas", "North Shore Gas", "Minnesota Energy Resources", "Michigan Gas Utilities", "Upper Michigan Energy Resources"],
+      "description": "The WEC Energy Group subsidiary utility"
+    },
+    "serviceType": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Electric", "Natural Gas"]
+      },
+      "description": "Energy services on this account"
+    },
+    "serviceAddress": {
+      "type": "object",
+      "properties": {
+        "street": {"type": "string"},
+        "city": {"type": "string"},
+        "state": {"type": "string", "enum": ["WI", "IL", "MN", "MI"]},
+        "zip": {"type": "string"}
+      },
+      "required": ["street", "city", "state", "zip"]
+    },
+    "mailingAddress": {
+      "type": "object",
+      "properties": {
+        "street": {"type": "string"},
+        "city": {"type": "string"},
+        "state": {"type": "string"},
+        "zip": {"type": "string"}
+      }
+    },
+    "accountStatus": {
+      "type": "string",
+      "enum": ["Active", "Inactive", "Delinquent", "Disconnected"],
+      "description": "Current status of the account"
+    },
+    "rateCode": {
+      "type": "string",
+      "description": "Tariff rate code applied to this account (e.g., Rg-1 for residential gas)"
+    },
+    "currentBalance": {
+      "type": "number",
+      "description": "Current account balance in USD"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Payment due date for current bill"
+    },
+    "averageMonthlyBill": {
+      "type": "number",
+      "description": "Average monthly bill amount in USD"
+    },
+    "budgetBillingAmount": {
+      "type": "number",
+      "description": "Monthly budget billing amount if enrolled in budget billing plan"
+    },
+    "paperlessBilling": {
+      "type": "boolean",
+      "description": "Whether the customer is enrolled in paperless/eBill"
+    },
+    "autoPay": {
+      "type": "boolean",
+      "description": "Whether automatic payment is enabled"
+    },
+    "energyEfficiencyPrograms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Focus on Energy or other efficiency programs the customer is enrolled in"
+    },
+    "alerts": {
+      "type": "array",
+      "description": "Configured account alerts",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["High Usage", "Bill Ready", "Payment Due", "Payment Received", "Outage", "Estimated Read"]
+          },
+          "channel": {
+            "type": "string",
+            "enum": ["Email", "SMS", "Push Notification"]
+          },
+          "enabled": {"type": "boolean"}
+        }
+      }
+    }
+  },
+  "required": ["accountNumber", "customerName", "utility", "serviceAddress", "accountStatus"]
+}

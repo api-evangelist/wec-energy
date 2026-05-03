@@ -1,0 +1,35 @@
+{
+  "title": "WEC Energy Group Monthly Energy Usage Example",
+  "description": "Example energy usage data record for a We Energies residential electric account",
+  "accountNumber": "1234567890",
+  "utility": "We Energies",
+  "serviceType": "Electric",
+  "serviceAddress": {
+    "street": "100 N Main St",
+    "city": "Milwaukee",
+    "state": "WI",
+    "zip": "53202"
+  },
+  "billingPeriodStart": "2026-04-01",
+  "billingPeriodEnd": "2026-04-30",
+  "totalUsage": 612,
+  "unit": "kWh",
+  "usageReadings": [
+    {
+      "timestamp": "2026-04-01T00:00:00-05:00",
+      "duration": 3600,
+      "value": 0.8,
+      "unit": "kWh",
+      "quality": "valid"
+    },
+    {
+      "timestamp": "2026-04-01T01:00:00-05:00",
+      "duration": 3600,
+      "value": 0.6,
+      "unit": "kWh",
+      "quality": "valid"
+    }
+  ],
+  "averageMonthlyBill": 87.50,
+  "rateCode": "Rg-1"
+}

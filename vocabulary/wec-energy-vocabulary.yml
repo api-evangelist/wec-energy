@@ -1,0 +1,166 @@
+aid: wec-energy
+name: WEC Energy Group Vocabulary
+description: >-
+  Vocabulary and terminology for WEC Energy Group and its subsidiary utilities.
+  Covers energy delivery concepts, utility operations, customer services, billing,
+  energy efficiency programs, and regulatory terms relevant to Wisconsin, Illinois,
+  Michigan, and Minnesota electric and natural gas service.
+modified: '2026-05-03'
+terms:
+
+  - term: WEC Energy Group
+    definition: >-
+      A publicly traded American energy holding company (NYSE: WEC) headquartered in
+      Milwaukee, Wisconsin. Serves 4.4 million electric and natural gas customers in
+      Wisconsin, Illinois, Michigan, and Minnesota through regulated utility subsidiaries.
+    tags:
+      - Company
+      - Fortune 500
+
+  - term: We Energies
+    definition: >-
+      The trade name for Wisconsin Electric Power Company and Wisconsin Gas LLC,
+      subsidiaries of WEC Energy Group serving southeastern and northern Wisconsin
+      with electricity and natural gas. The largest WEC subsidiary by customer count.
+    tags:
+      - Subsidiary
+      - Wisconsin
+
+  - term: Wisconsin Public Service
+    definition: >-
+      A WEC Energy Group subsidiary providing electric and natural gas service to
+      more than 776,000 customers in northeast and central Wisconsin including the
+      Green Bay area.
+    tags:
+      - Subsidiary
+      - Wisconsin
+
+  - term: Peoples Gas
+    definition: >-
+      A WEC Energy Group subsidiary providing natural gas service to approximately
+      870,000 customers in Chicago and surrounding Cook County communities in Illinois.
+    tags:
+      - Illinois
+      - Subsidiary
+
+  - term: Green Button
+    definition: >-
+      A national initiative enabling utility customers to download or share their
+      energy usage data in a standardized format. Based on the NAESB ESPI standard.
+      WEC utilities support Green Button Connect My Data allowing third-party app
+      access with customer authorization via OAuth2.
+    tags:
+      - Data Standard
+      - ESPI
+      - Open Data
+
+  - term: ESPI
+    definition: >-
+      Energy Services Provider Interface — an ANSI/NAESB standard (REQ.21) defining
+      data models and API protocols for sharing utility customer energy usage data.
+      Forms the technical foundation of the Green Button initiative.
+    tags:
+      - Data Standard
+      - NAESB
+
+  - term: Smart Meter
+    definition: >-
+      An advanced meter that records electricity or gas consumption at intervals
+      (typically hourly or 15-minute) and communicates data digitally. WEC utilities
+      operate Advanced Metering Infrastructure (AMI) enabling time-of-use pricing
+      and automated reads.
+    tags:
+      - Infrastructure
+      - Metering
+
+  - term: AMI
+    definition: >-
+      Advanced Metering Infrastructure — a comprehensive system including smart meters,
+      communications networks, and data management systems that enable two-way
+      communication between utilities and customers. Allows remote meter reading,
+      outage detection, and real-time usage data.
+    tags:
+      - Infrastructure
+      - Metering
+
+  - term: Focus on Energy
+    definition: >-
+      Wisconsin's statewide energy efficiency and renewable energy program funded by
+      WEC and other Wisconsin utilities. Provides incentives and resources for
+      residential and business customers to reduce energy consumption.
+    tags:
+      - Energy Efficiency
+      - Wisconsin
+
+  - term: Rate Code
+    definition: >-
+      A tariff classification code identifying the pricing schedule applied to a
+      utility account. Common WEC rate codes include Rg-1 (residential gas),
+      Rge-1 (residential electric), and Cg (commercial gas).
+    tags:
+      - Billing
+      - Tariff
+
+  - term: Budget Billing
+    definition: >-
+      A billing plan that averages estimated annual energy costs into equal monthly
+      payments, smoothing seasonal bill fluctuations. Common offering from all
+      WEC Energy Group utilities.
+    tags:
+      - Billing
+      - Customer Programs
+
+  - term: Estimated Restoration Time (ETR)
+    definition: >-
+      The utility's estimate of when power will be restored to customers experiencing
+      an outage. Communicated via the outage map, automated calls, and text alerts.
+    tags:
+      - Outage Management
+      - Operations
+
+  - term: Distribution Grid
+    definition: >-
+      The network of power lines, transformers, substations, and equipment that
+      delivers electricity from transmission systems to homes and businesses.
+      WEC utilities own and operate distribution grids in their service territories.
+    tags:
+      - Electric Infrastructure
+      - Grid
+
+  - term: PSCW
+    definition: >-
+      Public Service Commission of Wisconsin — the state regulatory agency that
+      oversees rates, service quality, and operations of We Energies and Wisconsin
+      Public Service. WEC subsidiaries in other states are regulated by their
+      respective state commissions (ICC in Illinois, MPSC in Michigan, MPUC in Minnesota).
+    tags:
+      - Regulation
+      - Wisconsin
+
+  - term: Natural Gas Distribution
+    definition: >-
+      The delivery of natural gas through pipelines from transmission systems to end
+      customers. WEC Energy Group operates natural gas distribution systems in Wisconsin,
+      Illinois, Michigan, and Minnesota through its subsidiary utilities.
+    tags:
+      - Natural Gas
+      - Infrastructure
+
+  - term: Bluewater Gas Storage
+    definition: >-
+      A WEC Energy Group subsidiary providing natural gas storage and hub services
+      in Michigan. Supplies seasonal storage for We Energies and Wisconsin Public
+      Service natural gas customers.
+    tags:
+      - Natural Gas
+      - Storage
+      - Subsidiary
+
+  - term: Outage Map
+    definition: >-
+      An interactive web and mobile tool showing the location, scope, and estimated
+      restoration time for active electric outages in the WEC utility service territory.
+      Powered by real-time operational data from the distribution management system.
+    tags:
+      - Customer Service
+      - Outage Management

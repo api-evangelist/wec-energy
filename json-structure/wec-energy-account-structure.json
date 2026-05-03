@@ -1,0 +1,23 @@
+{
+  "title": "WEC Energy Group Customer Account Structure",
+  "description": "Field documentation for WEC Energy Group customer account records.",
+  "type": "object",
+  "fields": [
+    {"name": "accountNumber", "type": "string", "required": true, "description": "Unique utility account number"},
+    {"name": "customerName", "type": "string", "required": true, "description": "Name of the account holder"},
+    {"name": "utility", "type": "string", "required": true, "description": "WEC Energy Group subsidiary utility name"},
+    {"name": "serviceType", "type": "array", "required": true, "description": "Energy services: Electric and/or Natural Gas"},
+    {"name": "serviceAddress", "type": "object", "required": true, "description": "Physical address where service is delivered"},
+    {"name": "mailingAddress", "type": "object", "required": false, "description": "Billing/mailing address if different from service address"},
+    {"name": "accountStatus", "type": "string", "required": true, "description": "Active, Inactive, Delinquent, or Disconnected"},
+    {"name": "rateCode", "type": "string", "required": false, "description": "Tariff rate code for this service"},
+    {"name": "currentBalance", "type": "number", "required": false, "description": "Current balance owed in USD"},
+    {"name": "dueDate", "type": "string", "required": false, "description": "Payment due date (ISO 8601 date)"},
+    {"name": "averageMonthlyBill", "type": "number", "required": false, "description": "Average monthly bill amount in USD"},
+    {"name": "budgetBillingAmount", "type": "number", "required": false, "description": "Budget billing monthly amount if enrolled"},
+    {"name": "paperlessBilling", "type": "boolean", "required": false, "description": "Whether enrolled in eBill paperless billing"},
+    {"name": "autoPay", "type": "boolean", "required": false, "description": "Whether automatic payment is active"},
+    {"name": "energyEfficiencyPrograms", "type": "array", "required": false, "description": "Focus on Energy and other efficiency program enrollments"},
+    {"name": "alerts", "type": "array", "required": false, "description": "Configured account notification alerts"}
+  ]
+}
