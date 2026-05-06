@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -8,174 +9,70 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: WEC Energy Group
 providerId: wec-energy
-publisherName: WEC Energy Group
-serviceCategory: API
+publisherName: WEC Energy Group, Inc.
+serviceCategory: Energy / Utility
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Energy
   - Electric Utility
   - Fortune 500
   - Green Button
-  - Illinois
-  - Michigan
-  - Minnesota
-  - Natural Gas
-  - NYSE
-  - Utility
-  - Wisconsin
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the WEC Energy Group API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+  - Contact Sales
+description: FinOps placement for WEC Energy Group. The "spend" surface here is regulated utility
+  charges (kWh / therms) at the operating-company level plus any data-sharing-agreement fees, not a
+  metered developer API.
+notes: No public usage-billing API for developer integrations. FOCUS mapping reflects utility-billing
+  shape only.
+sources:
+  - https://www.wecenergygroup.com/
 billingModel:
-  pricingCategory: Usage-Based
+  pricingCategory: Regulated Utility Tariff
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
     - Usage
-    - Purchase
     - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
   ServiceName: WEC Energy Group
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Energy / Utility
   ProviderName: WEC Energy Group
-  PublisherName: WEC Energy Group
-  InvoiceIssuerName: WEC Energy Group
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: WEC Energy Group, Inc.
+  InvoiceIssuerName: We Energies / WPS / Peoples Gas / North Shore Gas / MGU / MERC / UMERC
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: electric_consumption
+    description: Electricity delivered to the meter at the operating-company tariff.
+    unit: kWh
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - operating_company
+      - rate_class
+      - meter_id
+  - name: gas_consumption
+    description: Natural gas delivered to the meter at the operating-company tariff.
+    unit: therm
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: WEC Energy Group Customer Portal API
-    baseURL: ''
-    tags:
-      - Account Management
-      - Bill Payment
-      - Customer Portal
-      - Energy Usage
-      - Outage Reporting
-    serviceName: WEC Energy Group Customer Portal API
-    serviceCategory: API
-  - name: Green Button Energy Usage Data API
-    baseURL: ''
-    tags:
-      - Energy Data
-      - Green Button
-      - ESPI
-      - OAuth2
-      - Smart Meter
-      - Usage Data
-    serviceName: Green Button Energy Usage Data API
-    serviceCategory: API
-  - name: We Energies Outage Map API
-    baseURL: ''
-    tags:
-      - Electricity
-      - GIS
-      - Outage Map
-      - Real-Time
-      - Wisconsin
-    serviceName: We Energies Outage Map API
-    serviceCategory: API
-  - name: Peoples Gas Customer Service API
-    baseURL: ''
-    tags:
-      - Account Management
-      - Bill Payment
-      - Chicago
-      - Illinois
-      - Natural Gas
-    serviceName: Peoples Gas Customer Service API
-    serviceCategory: API
-  - name: WEC Energy Group Investor Relations API
-    baseURL: ''
-    tags:
-      - Financial Data
-      - Investor Relations
-      - NYSE
-      - SEC Filings
-      - Stock Data
-    serviceName: WEC Energy Group Investor Relations API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - operating_company
+      - rate_class
+      - meter_id
+principles:
+  - name: Visibility
+    description: Spend visibility is via the operating-company customer portal and Green Button
+      Download / Connect for the authorized customer; there is no public corporate usage API.
+  - name: Allocation
+    description: Allocate energy spend by site / meter / rate-class using the operating-company account
+      hierarchy and Green Button service-point IDs.
+  - name: Optimization
+    description: Optimization levers are tariff selection, demand-response participation, energy-efficiency
+      programs, and on-site generation under the operating company's interconnection rules.
+  - name: Accountability
+    description: Facilities / energy-management owners hold accountability and engage the operating
+      company's commercial / large-customer team for tariff and program decisions.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
