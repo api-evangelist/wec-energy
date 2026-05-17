@@ -129,9 +129,9 @@ common:
     url: https://careers.wecenergygroup.com/
   - type: Sustainability
     url: https://www.wecenergygroup.com/sustainability/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.we-energies.com/help/legal/terms-of-use/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.wecenergygroup.com/privacy-policy/
   - type: LinkedIn
     url: https://www.linkedin.com/company/wec-energy-group
