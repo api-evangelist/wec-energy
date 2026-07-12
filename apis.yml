@@ -113,6 +113,8 @@ apis:
         url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000783325
 
 common:
+  - type: DomainSecurity
+    url: security/wec-energy-domain-security.yml
   - type: Website
     url: https://www.wecenergygroup.com
   - type: Customer Portal
