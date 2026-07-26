@@ -8,10 +8,22 @@ description: >-
   Resources, Michigan Gas Utilities, and Upper Michigan Energy Resources. WEC Energy Group
   offers customer-facing digital services including account management portals, mobile apps,
   and Green Button energy usage data access.
+accessModel:
+  pricing: enterprise
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://www.wecenergygroup.com/images/wec-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/wec-energy/refs/heads/main/apis.yml
 created: '2024'
-modified: '2026-05-03'
+modified: '2026-07-25'
 specificationVersion: '0.19'
 apis:
   - name: WEC Energy Group Customer Portal API
@@ -93,24 +105,6 @@ apis:
         url: https://www.peoplesgas.com/my-account/
       - type: Website
         url: https://www.peoplesgas.com/
-
-  - name: WEC Energy Group Investor Relations API
-    description: >-
-      Financial data and investor relations resources for WEC Energy Group (NYSE: WEC).
-      Provides access to earnings releases, SEC filings, dividend information,
-      stock price data, and annual reports.
-    humanUrl: https://www.wecenergygroup.com/investor-relations/
-    tags:
-      - Financial Data
-      - Investor Relations
-      - NYSE
-      - SEC Filings
-      - Stock Data
-    properties:
-      - type: Investor Relations
-        url: https://www.wecenergygroup.com/investor-relations/
-      - type: SEC Filings
-        url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000783325
 
 common:
   - type: DomainSecurity
