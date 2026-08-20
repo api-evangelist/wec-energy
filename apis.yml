@@ -35,6 +35,12 @@ apis:
     humanUrl: https://www.we-energies.com/
     tags:
       - Account Management
+      - Bill Payments
+      - Customer Portal
+      - Energy Usage
+      - Outage Reporting
+    tags_raw:
+      - Account Management
       - Bill Payment
       - Customer Portal
       - Energy Usage
@@ -56,6 +62,13 @@ apis:
       Connect My Data standard for automated data sharing.
     humanUrl: https://www.energy.gov/data/green-button
     tags:
+      - Energy Data
+      - Green Button
+      - ESPI
+      - Authentication
+      - Smart Meter
+      - Usage Data
+    tags_raw:
       - Energy Data
       - Green Button
       - ESPI
@@ -95,6 +108,12 @@ apis:
       usage history, and service requests.
     humanUrl: https://www.peoplesgas.com/
     tags:
+      - Account Management
+      - Bill Payments
+      - Chicago
+      - Illinois
+      - Natural Gas
+    tags_raw:
       - Account Management
       - Bill Payment
       - Chicago
