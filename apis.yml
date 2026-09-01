@@ -46,7 +46,7 @@ apis:
     humanUrl: https://www.we-energies.com/
     tags:
       - Account Management
-      - Bill Payment
+      - Bill Payments
       - Customer Portal
       - Energy Usage
       - Outage Reporting
@@ -120,7 +120,7 @@ apis:
     humanUrl: https://www.peoplesgas.com/
     tags:
       - Account Management
-      - Bill Payment
+      - Bill Payments
       - Chicago
       - Illinois
       - Natural Gas
