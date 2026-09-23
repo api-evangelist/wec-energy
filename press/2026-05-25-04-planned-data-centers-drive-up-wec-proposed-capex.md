@@ -1,7 +1,9 @@
 ---
 title: Planned Data Centers Drive Up WEC Proposed Capex
 url: https://www.industrialinfo.com/news/article/planned-data-centers-drive-up-wec-proposed-capex-again--353394
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"WEC Energy Group" press release artificial intelligence'
 position: 4
 source: serpapi-google
