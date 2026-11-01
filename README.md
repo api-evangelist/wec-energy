@@ -64,77 +64,144 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-WEC Energy Group (NYSE: WEC) is one of the nation's premier energy companies, serving 4.4 million customers across Wisconsin, Illinois, Michigan, and Minnesota with electricity and natural gas service. The company operates through regional utilities including We Energies, Wisconsin Public Service, Peoples Gas, North Shore Gas, Minnesota Energy Resources, Michigan Gas Utilities, and Upper Michigan Energy Resources.
+WEC Energy Group (NYSE: WEC) is one of the nation's premier energy companies, serving 4.4 million customers across Wisconsin, Illinois, Michigan, and Minnesota with electricity and natural gas service. The company operates through regional utilities including We Energies, Wisconsin Public Service, Peoples Gas, North Shore Gas, Minnesota Energy Resources, Michigan Gas Utilities, and Upper Michigan Energy Resources. WEC Energy Group offers customer-facing digital services including account management portals, mobile apps, and Green Button energy usage data access.
 
-**Type:** Company (Fortune 500)
-**NYSE:** WEC
-**Website:** [wecenergygroup.com](https://www.wecenergygroup.com)
-**Headquarters:** Milwaukee, Wisconsin
+**Areas:** Energy · Electric Utility · Fortune 500 · Green Button · Illinois · Michigan · Minnesota · Natural Gas · NYSE · Utility · Wisconsin
 
-## Subsidiaries
+## WEC Energy Group on APIs.io
 
-| Subsidiary | States | Services |
-|-----------|--------|----------|
-| We Energies | Wisconsin | Electric + Natural Gas |
-| Wisconsin Public Service | Wisconsin | Electric + Natural Gas |
-| Peoples Gas | Illinois (Chicago) | Natural Gas |
-| North Shore Gas | Illinois | Natural Gas |
-| Minnesota Energy Resources | Minnesota | Natural Gas |
-| Michigan Gas Utilities | Michigan | Natural Gas |
-| Upper Michigan Energy Resources | Michigan | Electric + Natural Gas |
-| Bluewater Gas Storage | Michigan | Natural Gas Storage |
+Everything profiled for WEC Energy Group is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/wec-energy/](https://apis.io/providers/wec-energy/)** — or go straight to one of the APIs or properties below.
 
-## APIs
+### APIs (4)
 
-| API | Description |
-|-----|-------------|
-| [Customer Portal API](https://www.we-energies.com/) | Account management, bill payment, usage history, outage reporting |
-| [Green Button Energy Usage Data](https://www.energy.gov/data/green-button) | ESPI-standard customer energy data access |
-| [We Energies Outage Map](https://www.we-energies.com/outages-safety/outages/outage-map/) | Real-time electricity outage information |
-| [Peoples Gas Customer Service](https://www.peoplesgas.com/) | Account and billing for Chicago natural gas customers |
-| [Investor Relations](https://www.wecenergygroup.com/investor-relations/) | SEC filings, earnings, dividend, and stock information |
+- [WEC Energy Group Customer Portal API](https://apis.io/apis/wec-energy/wec-energy-group-customer-portal-api/) — Web and mobile API powering the WEC Energy Group customer self-service portal. Enables customers to view account information, pay bills, manage alerts, view…
+- [Green Button Energy Usage Data API](https://apis.io/apis/wec-energy/green-button-energy-usage-data-api/) — Green Button is a standardized API for accessing customer energy usage data. Based on the ESPI (Energy Services Provider Interface) standard, it allows…
+- [We Energies Outage Map API](https://apis.io/apis/wec-energy/we-energies-outage-map-api/) — Real-time electricity outage information for We Energies service territory in Wisconsin. Provides geographic outage data, estimated restoration times, and…
+- [Peoples Gas Customer Service API](https://apis.io/apis/wec-energy/peoples-gas-customer-service-api/) — Customer account and billing API for Peoples Gas, serving natural gas customers in the Chicago metropolitan area. Supports account management, bill payment,…
 
-## Artifacts
+### Published properties
 
-### JSON Schemas
-- [wec-energy-usage-schema.json](json-schema/wec-energy-usage-schema.json) — Energy usage data records (Green Button / ESPI aligned)
-- [wec-energy-account-schema.json](json-schema/wec-energy-account-schema.json) — Customer account schema
-- [wec-energy-outage-schema.json](json-schema/wec-energy-outage-schema.json) — Outage event schema
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### JSON Structures
-- [wec-energy-account-structure.json](json-structure/wec-energy-account-structure.json) — Account field documentation
+#### JSON Schema (3)
 
-### JSON-LD Contexts
-- [wec-energy-context.jsonld](json-ld/wec-energy-context.jsonld) — Linked data context for WEC Energy resources
+The data models the API reads and writes.
 
-### Examples
-- [wec-energy-usage-example.json](examples/wec-energy-usage-example.json) — Monthly energy usage data example
+- [WEC Energy Group Customer Account](https://apis.io/schemas/wec-energy/wec-energy-account/)
+- [WEC Energy Group Outage Event](https://apis.io/schemas/wec-energy/wec-energy-outage/)
+- [WEC Energy Group Energy Usage Data](https://apis.io/schemas/wec-energy/wec-energy-usage/)
 
-### Vocabulary
-- [wec-energy-vocabulary.yml](vocabulary/wec-energy-vocabulary.yml) — WEC Energy Group terminology
+#### JSON Structure (1)
 
-## Customer Programs
+Data models expressed in JSON Structure.
 
-- **Green Button Connect My Data** — Authorize apps to access your energy usage data
-- **Focus on Energy** — Wisconsin statewide energy efficiency program
-- **Budget Billing** — Levelized monthly payments
-- **Paperless Billing / eBill** — Electronic bill delivery
-- **AutoPay** — Automatic bill payment
-- **Outage Alerts** — SMS and email notifications
+- [Wec Energy Account Structure](https://apis.io/json-structure/wec-energy/wec-energy-account-structure/)
 
-## Common Properties
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Wec Energy Context](https://apis.io/jsonld/wec-energy/wec-energy-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [WEC Energy Group Vocabulary](https://apis.io/vocabularies/wec-energy/wec-energy-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Wec Energy Usage Example](https://apis.io/examples/wec-energy/wec-energy-usage-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [WEC Energy Group — jsonschema rules](https://apis.io/rules/wec-energy/wec-energy-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Wec Energy Domain Security](https://apis.io/security/wec-energy/wec-energy-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Wec Energy Plans Pricing](https://apis.io/plans/wec-energy/wec-energy-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Wec Energy Rate Limits](https://apis.io/rate-limits/wec-energy/wec-energy-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Wec Energy Finops](https://apis.io/finops/wec-energy/wec-energy-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.wecenergygroup.com)
-- [Customer Portal](https://www.we-energies.com/)
-- [Peoples Gas Portal](https://www.peoplesgas.com/)
-- [Wisconsin Public Service Portal](https://www.wisconsinpublicservice.com/)
-- [Investor Relations](https://www.wecenergygroup.com/investor-relations/)
-- [Sustainability](https://www.wecenergygroup.com/sustainability/)
-- [Careers](https://careers.wecenergygroup.com/)
-- [LinkedIn](https://www.linkedin.com/company/wec-energy-group)
-- [Twitter](https://twitter.com/WECEnergyGroup)
+- [Terms of service](https://www.we-energies.com/help/legal/terms-of-use/)
+- [Privacy policy](https://www.wecenergygroup.com/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 10.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.0** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/wec-energy/](https://apis.io/providers/wec-energy/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for WEC Energy Group: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/wec-energy/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
